@@ -1,0 +1,18 @@
+dependencies:
+  runtime:
+    - java:8.202.08
+    - maven:3.3.3
+  build:
+    - java:8.202.08
+    - maven:3.3.3
+
+build_targets:
+  - name: default
+    commands:
+      - mvn package
+
+ci:
+  builds:
+  - name: build
+    build_target: default
+    report_status: false
